@@ -4,6 +4,22 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
+closure = () => {
+  let name = "Dog"
+
+  closure1 = ()=>{
+     let alert = "bark"
+     console.log(`the ${name} ran and got the ball.`)
+ 
+    closure2 = ()=>{
+      console.log(`the ${name} can ${alert}`)
+    };
+    closure2();
+  }
+  closure1();
+}
+
+closure()
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
