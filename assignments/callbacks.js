@@ -41,25 +41,71 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
+  console.log(cb(arr))
+
 }
+function itemlength(arr) {
+  return arr.length;
+}
+
+getLength(items, itemlength); // end 1
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
+  console.log(cb(arr))
 }
+
+function lastitem(arr){
+for(var i = 0; i < arr.length; i++){
+  return arr[3]
+ }
+}
+
+last(items, lastitem) // end 2
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
-}
+  let sum = x + y;
+   console.log(cb(sum))
+};
+
+function callBackSum(sum){
+  return sum;
+};
+
+sumNums(4,6,callBackSum);
 
 function multiplyNums(x, y, cb) {
+  let muliplysum = x * y;
+  console.log(cb(muliplysum))
   // multiplyNums multiplies two numbers and passes the result to the callback.
 }
+
+function callbackmulti(multisum){
+  return multisum;
+}
+
+multiplyNums(10,10,callbackmulti)
+
+var array = [7,7,4,5,6,6]
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
+if(list.includes(item)){
+  return cb()
+}else{
+  return console.log(false)
 }
 
+ 
+}
+
+function checksiftrue(){
+  console.log(true);
+}
+
+contains(5, array, checksiftrue)
 /* STRETCH PROBLEM */
 
 function removeDuplicates(array, cb) {
